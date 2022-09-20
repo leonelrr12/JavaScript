@@ -10,6 +10,10 @@
 <body>
   
   <div class="leo-login">
+    <div class="dark-mode-control">
+      <input type="checkbox" name="dark-toggle" id="dark-toggle" class="dark-toggle">
+      <label for="dark-toggle"></label>
+    </div>
     <div class="card">
       <h2>Iniciar sesión</h1>
       <form action="">
@@ -22,5 +26,24 @@
     </div>
   </div>
   
+  <script>
+    // isUsingDarkMode();
+
+    let checkBoxElement = document.querySelector('.dark-toggle');
+    checkBoxElement.addEventListener('change', () => {
+      let bodyElement = document.querySelector('body');
+      if(checkBoxElement.checked) {
+        bodyElement.classList.remove('force-light');
+        bodyElement.classList.add('force-dark');
+      } else {
+        bodyElement.classList.remove('force-dark');
+        bodyElement.classList.add('force-light');
+      }
+    });
+
+    function isUsingDarkMode() {
+      alert('Dark mode');
+    }
+  </script>
 </body>
 </html>
