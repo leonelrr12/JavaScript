@@ -1,3 +1,4 @@
+
 .slider {
   width: 600px;
  
@@ -75,7 +76,7 @@ nav li {
   text-align: center;
 }
 
-input {
+.container-2 input {
   padding: 1em;
   display: inline-block;
   font-size: 1.3em;
@@ -196,3 +197,5 @@ input {
 .leo-calendar button:hover {
   background-color: #cd1b3e;
 }
+
+
