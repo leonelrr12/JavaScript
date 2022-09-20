@@ -49,6 +49,7 @@
 }
 
 
+/* Menu NAV */
 nav {
   background-color: #303f9f;
   color: #fff;
@@ -61,4 +62,22 @@ nav li {
   margin-right: 10px;
   padding: 10px;
   font-size: 24px;
+}
+
+
+/* Autocomplete */
+.container-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  padding: 1em;
+  display: inline-block;
+  font-size: 1.3em;
+  width: 350px;
 }
