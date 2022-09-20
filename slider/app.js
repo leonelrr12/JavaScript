@@ -151,7 +151,20 @@ class Autocomplete {
   }
 }
 
+class InputMD {
+  constructor(selector) {
+    this.input = document.querySelector(selector);
+    this.bindEvents();
+  }
 
+  bindEvents() {
+    this.input.addEventListener("keyup", () => {
+      if(this.input.value == "") return this.input.classList.remove("non-empty");
+
+      this.input.classList.add("non-empty");
+    })
+  }
+}
 
 (function(){
 
@@ -159,5 +172,7 @@ class Autocomplete {
 
   const GooglBooksApiURL = "https://www.googleapis.com/books/v1/volumes?q=";
   let autocomplete = new Autocomplete("#searcher", GooglBooksApiURL)
+
+  new InputMD(".input-form input");
 
 })()
